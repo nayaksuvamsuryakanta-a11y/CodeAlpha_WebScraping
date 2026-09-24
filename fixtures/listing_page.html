@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head><title>All products | Books to Scrape</title></head>
+<body>
+<div class="container-fluid page">
+  <div class="row">
+    <section>
+      <div class="col-sm-8 col-md-9">
+        <ol class="row">
+
+          <!-- Book 1 — normal record -->
+          <li class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <article class="product_pod">
+              <h3><a href="catalogue/a-light-in-the-attic_1000/index.html"
+                     title="A Light in the Attic">A Light in the Attic</a></h3>
+              <p class="star-rating Three"></p>
+              <p class="price_color">&#163;51.77</p>
+              <p class="instock availability">In stock</p>
+            </article>
+          </li>
+
+          <!-- Book 2 — different rating -->
+          <li class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <article class="product_pod">
+              <h3><a href="catalogue/tipping-the-velvet_999/index.html"
+                     title="Tipping the Velvet">Tipping the Velvet</a></h3>
+              <p class="star-rating One"></p>
+              <p class="price_color">&#163;53.74</p>
+              <p class="instock availability">In stock</p>
+            </article>
+          </li>
+
+          <!-- Book 3 — missing price tag (malformed) -->
+          <li class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <article class="product_pod">
+              <h3><a href="catalogue/no-price_1/index.html"
+                     title="No Price Book">No Price Book</a></h3>
+              <p class="star-rating Two"></p>
+              <!-- price_color paragraph intentionally missing -->
+              <p class="instock availability">In stock</p>
+            </article>
+          </li>
+
+          <!-- Book 4 — out of stock, no rating -->
+          <li class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <article class="product_pod">
+              <h3><a href="catalogue/out-of-stock_2/index.html"
+                     title="Out of Stock Book">Out of Stock Book</a></h3>
+              <!-- no star-rating paragraph -->
+              <p class="price_color">&#163;10.00</p>
+              <!-- no instock paragraph -->
+            </article>
+          </li>
+
+        </ol>
+
+        <!-- Pagination: next page present -->
+        <ul class="pager">
+          <li class="next"><a href="page-2.html">next</a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
