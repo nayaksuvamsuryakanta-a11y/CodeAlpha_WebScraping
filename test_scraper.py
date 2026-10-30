@@ -12,8 +12,8 @@ import textwrap
 from pathlib import Path
 from typing import Optional
 from unittest.mock import MagicMock, patch, call
+from urllib.error import URLError
 
-import pytest
 import requests
 from bs4 import BeautifulSoup
 
@@ -452,3 +452,43 @@ class TestBuildArgParser:
     def test_dry_run_flag(self) -> None:
         args = scraper.build_arg_parser().parse_args(["--dry-run"])
         assert args.dry_run is True
+
+    def test_ignore_robots_flag(self) -> None:
+        args = scraper.build_arg_parser().parse_args(["--ignore-robots"])
+        assert args.ignore_robots is True
+
+
+# ---------------------------------------------------------------------------
+# 10. robots.txt policy check (all network access mocked)
+# ---------------------------------------------------------------------------
+class TestRobotsCheck:
+    def _response(self, text: str) -> MagicMock:
+        response = MagicMock()
+        response.__enter__.return_value.read.return_value = text.encode("utf-8")
+        return response
+
+    def test_allows_base_path_from_robots_rules(self) -> None:
+        robots = "User-agent: *\nAllow: /catalogue/\nDisallow: /private/\n"
+        with patch("scraper.urllib_request.urlopen", return_value=self._response(robots)) as urlopen:
+            assert scraper.check_robots(_cfg()) is True
+        request = urlopen.call_args.args[0]
+        assert request.get_header("User-agent") == scraper.USER_AGENT
+        assert urlopen.call_args.kwargs["timeout"] == 5
+
+    def test_disallows_base_path_from_robots_rules(self) -> None:
+        robots = "User-agent: *\nDisallow: /catalogue/\n"
+        with patch("scraper.urllib_request.urlopen", return_value=self._response(robots)):
+            assert scraper.check_robots(_cfg()) is False
+
+    def test_unavailable_robots_file_warns_and_continues(self, caplog) -> None:
+        with patch("scraper.urllib_request.urlopen", side_effect=URLError("offline")):
+            assert scraper.check_robots(_cfg()) is True
+        assert "continuing" in caplog.text
+
+    def test_ignore_robots_flag_skips_check(self) -> None:
+        with patch("sys.argv", ["scraper.py", "--ignore-robots", "--dry-run"]):
+            with patch("scraper.check_robots") as check:
+                with patch("scraper.run_scraper") as run:
+                    scraper.main()
+        check.assert_not_called()
+        assert run.call_args.args[0].ignore_robots is True

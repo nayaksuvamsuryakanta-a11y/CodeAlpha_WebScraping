@@ -1,5 +1,7 @@
 # CodeAlpha_WebScraping
 
+[Technical Documentation](docs/TECHNICAL_DOCUMENTATION.md)
+
 A Python web-scraping project built as part of the **CodeAlpha Data Analytics Internship**.  
 It scrapes the entirety of [books.toscrape.com](https://books.toscrape.com) — a publicly available, scraping-friendly sandbox — and produces a clean, analysis-ready CSV dataset of all 1 000 books.
 
@@ -118,7 +120,8 @@ source .venv/bin/activate
 ### 3 — Install dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
+python -m pytest
 ```
 
 ---

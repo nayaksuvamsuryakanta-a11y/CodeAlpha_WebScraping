@@ -7,15 +7,25 @@ Author  : CodeAlpha Internship Task
 
 import argparse
 import csv
+from http.client import HTTPException
 import logging
 import os
 import time
 from dataclasses import dataclass, field, fields, astuple
 from pathlib import Path
 from typing import Optional
+from urllib.error import HTTPError, URLError
+from urllib import request as urllib_request
+from urllib.robotparser import RobotFileParser
 
 import requests
 from bs4 import BeautifulSoup
+
+USER_AGENT = (
+    "Mozilla/5.0 (compatible; CodeAlphaBot/1.0; "
+    "+https://github.com/codealpha/webscraping)"
+)
+ROBOTS_URL = "https://books.toscrape.com/robots.txt"
 
 # ---------------------------------------------------------------------------
 # Configuration  (all constants in one place — override via CLI or .env)
@@ -32,6 +42,7 @@ class Config:
     limit_pages: Optional[int] = None   # None = scrape all pages
     resume: bool        = False   # skip UPCs already present in output_file
     dry_run: bool       = False   # fetch/parse one page, no save
+    ignore_robots: bool = False   # skip the robots.txt check
 
     # Read optional overrides from environment variables at init time
     def __post_init__(self) -> None:
@@ -56,6 +67,28 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 log = logging.getLogger(__name__)
+
+
+def check_robots(cfg: Config) -> bool:
+    """Return whether robots.txt permits this scraper to fetch the base URL.
+
+    If robots.txt cannot be retrieved or parsed, warn and continue so a
+    temporary policy-file failure does not prevent the scrape.
+    """
+    parser = RobotFileParser()
+    parser.set_url(ROBOTS_URL)
+    request = urllib_request.Request(ROBOTS_URL, headers={"User-Agent": USER_AGENT})
+    try:
+        with urllib_request.urlopen(request, timeout=cfg.request_timeout) as response:
+            parser.parse(response.read().decode("utf-8").splitlines())
+    except (HTTPError, URLError, TimeoutError, OSError, HTTPException, UnicodeDecodeError) as exc:
+        log.warning("Could not fetch or parse robots.txt (%s); continuing.", exc)
+        return True
+
+    allowed = parser.can_fetch(USER_AGENT, cfg.base_url)
+    if not allowed:
+        log.error("robots.txt disallows scraping base URL: %s", cfg.base_url)
+    return allowed
 
 # ---------------------------------------------------------------------------
 # Data model
@@ -410,6 +443,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Fetch and parse one catalogue page, log results, do not save.",
     )
+    parser.add_argument(
+        "--ignore-robots",
+        action="store_true",
+        help="Skip the robots.txt permission check.",
+    )
     return parser
 
 
@@ -448,10 +486,7 @@ def run_scraper(cfg: Optional[Config] = None) -> list[Book]:
     # Persistent session for connection reuse and consistent headers
     session = requests.Session()
     session.headers.update({
-        "User-Agent": (
-            "Mozilla/5.0 (compatible; CodeAlphaBot/1.0; "
-            "+https://github.com/codealpha/webscraping)"
-        )
+        "User-Agent": USER_AGENT
     })
 
     log.info("Starting scrape — target: https://books.toscrape.com")
@@ -541,6 +576,11 @@ def main() -> None:
         cfg.resume = True
     if args.dry_run:
         cfg.dry_run = True
+    if args.ignore_robots:
+        cfg.ignore_robots = True
+
+    if not cfg.ignore_robots and not check_robots(cfg):
+        raise SystemExit(1)
 
     run_scraper(cfg)
 
