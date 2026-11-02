@@ -1,0 +1,153 @@
+21:07:50  INFO      Starting scrape — target: https://books.toscrape.com
+21:07:50  INFO      Scraping page 1 \u2192 https://books.toscrape.com/catalogue/page-1.html
+21:08:22  INFO        Page 1: 20 books collected  (total so far: 20)
+21:08:22  INFO        Flushed 20 rows to books_dataset.csv
+21:08:23  INFO      Scraping page 2 \u2192 https://books.toscrape.com/catalogue/page-2.html
+21:08:55  INFO        Page 2: 20 books collected  (total so far: 40)
+21:08:55  INFO        Flushed 20 rows to books_dataset.csv
+21:08:56  INFO      Scraping page 3 \u2192 https://books.toscrape.com/catalogue/page-3.html
+21:09:28  INFO        Page 3: 20 books collected  (total so far: 60)
+21:09:28  INFO        Flushed 20 rows to books_dataset.csv
+21:09:29  INFO      Scraping page 4 \u2192 https://books.toscrape.com/catalogue/page-4.html
+21:10:01  INFO        Page 4: 20 books collected  (total so far: 80)
+21:10:01  INFO        Flushed 20 rows to books_dataset.csv
+21:10:02  INFO      Scraping page 5 \u2192 https://books.toscrape.com/catalogue/page-5.html
+21:10:35  INFO        Page 5: 20 books collected  (total so far: 100)
+21:10:35  INFO        Flushed 20 rows to books_dataset.csv
+21:10:36  INFO      Scraping page 6 \u2192 https://books.toscrape.com/catalogue/page-6.html
+21:11:08  INFO        Page 6: 20 books collected  (total so far: 120)
+21:11:08  INFO        Flushed 20 rows to books_dataset.csv
+21:11:09  INFO      Scraping page 7 \u2192 https://books.toscrape.com/catalogue/page-7.html
+21:11:41  INFO        Page 7: 20 books collected  (total so far: 140)
+21:11:41  INFO        Flushed 20 rows to books_dataset.csv
+21:11:42  INFO      Scraping page 8 \u2192 https://books.toscrape.com/catalogue/page-8.html
+21:12:16  INFO        Page 8: 20 books collected  (total so far: 160)
+21:12:16  INFO        Flushed 20 rows to books_dataset.csv
+21:12:17  INFO      Scraping page 9 \u2192 https://books.toscrape.com/catalogue/page-9.html
+21:12:50  INFO        Page 9: 20 books collected  (total so far: 180)
+21:12:50  INFO        Flushed 20 rows to books_dataset.csv
+21:12:51  INFO      Scraping page 10 \u2192 https://books.toscrape.com/catalogue/page-10.html
+21:13:23  INFO        Page 10: 20 books collected  (total so far: 200)
+21:13:23  INFO        Flushed 20 rows to books_dataset.csv
+21:13:24  INFO      Scraping page 11 \u2192 https://books.toscrape.com/catalogue/page-11.html
+21:13:56  INFO        Page 11: 20 books collected  (total so far: 220)
+21:13:56  INFO        Flushed 20 rows to books_dataset.csv
+21:13:57  INFO      Scraping page 12 \u2192 https://books.toscrape.com/catalogue/page-12.html
+21:14:31  INFO        Page 12: 20 books collected  (total so far: 240)
+21:14:31  INFO        Flushed 20 rows to books_dataset.csv
+21:14:32  INFO      Scraping page 13 \u2192 https://books.toscrape.com/catalogue/page-13.html
+21:15:08  INFO        Page 13: 20 books collected  (total so far: 260)
+21:15:08  INFO        Flushed 20 rows to books_dataset.csv
+21:15:09  INFO      Scraping page 14 \u2192 https://books.toscrape.com/catalogue/page-14.html
+21:15:42  INFO        Page 14: 20 books collected  (total so far: 280)
+21:15:42  INFO        Flushed 20 rows to books_dataset.csv
+21:15:43  INFO      Scraping page 15 \u2192 https://books.toscrape.com/catalogue/page-15.html
+21:16:15  INFO        Page 15: 20 books collected  (total so far: 300)
+21:16:15  INFO        Flushed 20 rows to books_dataset.csv
+21:16:16  INFO      Scraping page 16 \u2192 https://books.toscrape.com/catalogue/page-16.html
+21:16:49  INFO        Page 16: 20 books collected  (total so far: 320)
+21:16:49  INFO        Flushed 20 rows to books_dataset.csv
+21:16:50  INFO      Scraping page 17 \u2192 https://books.toscrape.com/catalogue/page-17.html
+21:17:24  INFO        Page 17: 20 books collected  (total so far: 340)
+21:17:24  INFO        Flushed 20 rows to books_dataset.csv
+21:17:25  INFO      Scraping page 18 \u2192 https://books.toscrape.com/catalogue/page-18.html
+21:17:57  INFO        Page 18: 20 books collected  (total so far: 360)
+21:17:57  INFO        Flushed 20 rows to books_dataset.csv
+21:17:58  INFO      Scraping page 19 \u2192 https://books.toscrape.com/catalogue/page-19.html
+21:18:32  INFO        Page 19: 20 books collected  (total so far: 380)
+21:18:32  INFO        Flushed 20 rows to books_dataset.csv
+21:18:33  INFO      Scraping page 20 \u2192 https://books.toscrape.com/catalogue/page-20.html
+21:19:10  INFO        Page 20: 20 books collected  (total so far: 400)
+21:19:10  INFO        Flushed 20 rows to books_dataset.csv
+21:19:11  INFO      Scraping page 21 \u2192 https://books.toscrape.com/catalogue/page-21.html
+21:19:47  INFO        Page 21: 20 books collected  (total so far: 420)
+21:19:47  INFO        Flushed 20 rows to books_dataset.csv
+21:19:48  INFO      Scraping page 22 \u2192 https://books.toscrape.com/catalogue/page-22.html
+21:20:22  INFO        Page 22: 20 books collected  (total so far: 440)
+21:20:22  INFO        Flushed 20 rows to books_dataset.csv
+21:20:23  INFO      Scraping page 23 \u2192 https://books.toscrape.com/catalogue/page-23.html
+21:20:56  INFO        Page 23: 20 books collected  (total so far: 460)
+21:20:56  INFO        Flushed 20 rows to books_dataset.csv
+21:20:57  INFO      Scraping page 24 \u2192 https://books.toscrape.com/catalogue/page-24.html
+21:21:31  INFO        Page 24: 20 books collected  (total so far: 480)
+21:21:31  INFO        Flushed 20 rows to books_dataset.csv
+21:21:32  INFO      Scraping page 25 \u2192 https://books.toscrape.com/catalogue/page-25.html
+21:22:06  INFO        Page 25: 20 books collected  (total so far: 500)
+21:22:06  INFO        Flushed 20 rows to books_dataset.csv
+21:22:07  INFO      Scraping page 26 \u2192 https://books.toscrape.com/catalogue/page-26.html
+21:22:41  INFO        Page 26: 20 books collected  (total so far: 520)
+21:22:41  INFO        Flushed 20 rows to books_dataset.csv
+21:22:42  INFO      Scraping page 27 \u2192 https://books.toscrape.com/catalogue/page-27.html
+21:23:15  INFO        Page 27: 20 books collected  (total so far: 540)
+21:23:15  INFO        Flushed 20 rows to books_dataset.csv
+21:23:16  INFO      Scraping page 28 \u2192 https://books.toscrape.com/catalogue/page-28.html
+21:23:48  INFO        Page 28: 20 books collected  (total so far: 560)
+21:23:48  INFO        Flushed 20 rows to books_dataset.csv
+21:23:49  INFO      Scraping page 29 \u2192 https://books.toscrape.com/catalogue/page-29.html
+21:24:22  INFO        Page 29: 20 books collected  (total so far: 580)
+21:24:22  INFO        Flushed 20 rows to books_dataset.csv
+21:24:23  INFO      Scraping page 30 \u2192 https://books.toscrape.com/catalogue/page-30.html
+21:24:55  INFO        Page 30: 20 books collected  (total so far: 600)
+21:24:55  INFO        Flushed 20 rows to books_dataset.csv
+21:24:56  INFO      Scraping page 31 \u2192 https://books.toscrape.com/catalogue/page-31.html
+21:25:27  INFO        Page 31: 20 books collected  (total so far: 620)
+21:25:27  INFO        Flushed 20 rows to books_dataset.csv
+21:25:28  INFO      Scraping page 32 \u2192 https://books.toscrape.com/catalogue/page-32.html
+21:26:00  INFO        Page 32: 20 books collected  (total so far: 640)
+21:26:00  INFO        Flushed 20 rows to books_dataset.csv
+21:26:01  INFO      Scraping page 33 \u2192 https://books.toscrape.com/catalogue/page-33.html
+21:26:33  INFO        Page 33: 20 books collected  (total so far: 660)
+21:26:33  INFO        Flushed 20 rows to books_dataset.csv
+21:26:34  INFO      Scraping page 34 \u2192 https://books.toscrape.com/catalogue/page-34.html
+21:27:08  INFO        Page 34: 20 books collected  (total so far: 680)
+21:27:08  INFO        Flushed 20 rows to books_dataset.csv
+21:27:09  INFO      Scraping page 35 \u2192 https://books.toscrape.com/catalogue/page-35.html
+21:27:41  INFO        Page 35: 20 books collected  (total so far: 700)
+21:27:41  INFO        Flushed 20 rows to books_dataset.csv
+21:27:42  INFO      Scraping page 36 \u2192 https://books.toscrape.com/catalogue/page-36.html
+21:28:13  INFO        Page 36: 20 books collected  (total so far: 720)
+21:28:13  INFO        Flushed 20 rows to books_dataset.csv
+21:28:14  INFO      Scraping page 37 \u2192 https://books.toscrape.com/catalogue/page-37.html
+21:28:46  INFO        Page 37: 20 books collected  (total so far: 740)
+21:28:46  INFO        Flushed 20 rows to books_dataset.csv
+21:28:47  INFO      Scraping page 38 \u2192 https://books.toscrape.com/catalogue/page-38.html
+21:29:19  INFO        Page 38: 20 books collected  (total so far: 760)
+21:29:19  INFO        Flushed 20 rows to books_dataset.csv
+21:29:20  INFO      Scraping page 39 \u2192 https://books.toscrape.com/catalogue/page-39.html
+21:29:51  INFO        Page 39: 20 books collected  (total so far: 780)
+21:29:51  INFO        Flushed 20 rows to books_dataset.csv
+21:29:52  INFO      Scraping page 40 \u2192 https://books.toscrape.com/catalogue/page-40.html
+21:30:24  INFO        Page 40: 20 books collected  (total so far: 800)
+21:30:24  INFO        Flushed 20 rows to books_dataset.csv
+21:30:25  INFO      Scraping page 41 \u2192 https://books.toscrape.com/catalogue/page-41.html
+21:30:57  INFO        Page 41: 20 books collected  (total so far: 820)
+21:30:57  INFO        Flushed 20 rows to books_dataset.csv
+21:30:58  INFO      Scraping page 42 \u2192 https://books.toscrape.com/catalogue/page-42.html
+21:31:30  INFO        Page 42: 20 books collected  (total so far: 840)
+21:31:30  INFO        Flushed 20 rows to books_dataset.csv
+21:31:31  INFO      Scraping page 43 \u2192 https://books.toscrape.com/catalogue/page-43.html
+21:32:02  INFO        Page 43: 20 books collected  (total so far: 860)
+21:32:02  INFO        Flushed 20 rows to books_dataset.csv
+21:32:03  INFO      Scraping page 44 \u2192 https://books.toscrape.com/catalogue/page-44.html
+21:32:35  INFO        Page 44: 20 books collected  (total so far: 880)
+21:32:35  INFO        Flushed 20 rows to books_dataset.csv
+21:32:36  INFO      Scraping page 45 \u2192 https://books.toscrape.com/catalogue/page-45.html
+21:33:08  INFO        Page 45: 20 books collected  (total so far: 900)
+21:33:08  INFO        Flushed 20 rows to books_dataset.csv
+21:33:09  INFO      Scraping page 46 \u2192 https://books.toscrape.com/catalogue/page-46.html
+21:33:41  INFO        Page 46: 20 books collected  (total so far: 920)
+21:33:41  INFO        Flushed 20 rows to books_dataset.csv
+21:33:42  INFO      Scraping page 47 \u2192 https://books.toscrape.com/catalogue/page-47.html
+21:34:14  INFO        Page 47: 20 books collected  (total so far: 940)
+21:34:14  INFO        Flushed 20 rows to books_dataset.csv
+21:34:15  INFO      Scraping page 48 \u2192 https://books.toscrape.com/catalogue/page-48.html
+21:34:48  INFO        Page 48: 20 books collected  (total so far: 960)
+21:34:48  INFO        Flushed 20 rows to books_dataset.csv
+21:34:49  INFO      Scraping page 49 \u2192 https://books.toscrape.com/catalogue/page-49.html
+21:35:20  INFO        Page 49: 20 books collected  (total so far: 980)
+21:35:20  INFO        Flushed 20 rows to books_dataset.csv
+21:35:21  INFO      Scraping page 50 \u2192 https://books.toscrape.com/catalogue/page-50.html
+21:35:54  INFO        Page 50: 20 books collected  (total so far: 1000)
+21:35:54  INFO        Flushed 20 rows to books_dataset.csv
+21:35:54  INFO      Scraping complete. Total books collected: 1000
+21:35:54  INFO      Validation report — 1000/1000 books scraped successfully, 0 issues.
